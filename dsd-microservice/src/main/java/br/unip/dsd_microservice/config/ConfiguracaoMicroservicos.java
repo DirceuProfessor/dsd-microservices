@@ -9,7 +9,7 @@ public class ConfiguracaoMicroservicos extends Configuration {
     private String template;
 
     @NotEmpty
-    private String nomePadrao = "Estranho";
+    private String nomePadrao = "EstranhoPadrao";
 
     @JsonProperty
     public String getTemplate() {

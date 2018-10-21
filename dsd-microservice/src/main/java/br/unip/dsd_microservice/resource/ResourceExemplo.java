@@ -13,7 +13,7 @@ import javax.ws.rs.core.MediaType;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.Optional;
 
-@Path("/dsd-microservice")
+@Path("/exemplo-microservico")
 @Produces(MediaType.APPLICATION_JSON)
 public class ResourceExemplo{
     private final String template;
