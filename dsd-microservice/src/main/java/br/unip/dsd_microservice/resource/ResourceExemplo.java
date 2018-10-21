@@ -17,19 +17,19 @@ import java.util.Optional;
 @Produces(MediaType.APPLICATION_JSON)
 public class ResourceExemplo{
     private final String template;
-    private final String defaultName;
+    private final String nomePadrao;
     private final AtomicLong counter;
 
     public ResourceExemplo(String template, String defaultName) {
         this.template = template;
-        this.defaultName = defaultName;
+        this.nomePadrao = defaultName;
         this.counter = new AtomicLong();
     }
 
     @GET
     @Timed
-    public ExemploJson sayHello(@QueryParam("name") Optional<String> name) {
-        final String value = String.format(template, name.orElse(defaultName));
+    public ExemploJson digaOla(@QueryParam("name") Optional<String> name) {
+        final String value = String.format(template, name.orElse(nomePadrao));
         return new ExemploJson(counter.incrementAndGet(), value);
     }
 }

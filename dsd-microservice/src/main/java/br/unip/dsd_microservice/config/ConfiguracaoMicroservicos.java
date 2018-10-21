@@ -9,7 +9,7 @@ public class ConfiguracaoMicroservicos extends Configuration {
     private String template;
 
     @NotEmpty
-    private String defaultName = "Stranger";
+    private String nomePadrao = "Estranho";
 
     @JsonProperty
     public String getTemplate() {
@@ -22,12 +22,12 @@ public class ConfiguracaoMicroservicos extends Configuration {
     }
 
     @JsonProperty
-    public String getDefaultName() {
-        return defaultName;
+    public String getNomePadrao() {
+        return nomePadrao;
     }
 
     @JsonProperty
-    public void setDefaultName(String name) {
-        this.defaultName = name;
+    public void setNomePadrao(String name) {
+        this.nomePadrao = name;
     }
 }

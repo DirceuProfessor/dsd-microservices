@@ -16,12 +16,12 @@ public class AplicacaoExemplo extends Application<ConfiguracaoMicroservicos> {
 
     @Override
     public String getName() {
-        return "hello-world";
+        return "exemplo-microservico";
     }
 
     @Override
     public void initialize(Bootstrap<ConfiguracaoMicroservicos> bootstrap) {
-        // nothing to do yet
+        
     }
 
     @Override
@@ -29,7 +29,7 @@ public class AplicacaoExemplo extends Application<ConfiguracaoMicroservicos> {
                     Environment environment) {
         final ResourceExemplo resource = new ResourceExemplo(
             configuration.getTemplate(),
-            configuration.getDefaultName()
+            configuration.getNomePadrao()
         );
         environment.jersey().register(resource);
         final VerificadorMetodoExemplo healthCheck =
